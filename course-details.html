@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورة أحكام المواريث - منصة ترتيل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --accent-color: #d4af37;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #6c757d;
+            --border-color: #edf2f7;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- شريط التنقل العلوي --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 6%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-text {
+            color: var(--primary-color);
+            font-weight: 900;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            border: 2px solid var(--primary-color);
+            padding: 8px 22px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* --- حاوي المحتوى الرئيسي --- */
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* --- كارت الواجهة والمقدمة --- */
+        .course-hero {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            margin-bottom: 35px;
+        }
+
+        .course-hero h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .course-meta-tags {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0 0 0;
+            padding: 15px;
+            background-color: #f4f7f5;
+            border-radius: 10px;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 15px;
+        }
+
+        .meta-item span {
+            color: var(--accent-color);
+        }
+
+        /* --- العناوين والمناهج الشبيهة باكتِمَال --- */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            text-align: right;
+            position: relative;
+            padding-right: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 4px;
+            height: 22px;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* --- هيكل الـ Accordion القابل للطي --- */
+        .accordion-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+        }
+ .accordion-header {
+            width: 100%;
+            background-color: var(--white);
+            padding: 20px;
+            text-align: right;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color: #fcfdfe;
+        }
+
+        .accordion-icon {
+            font-size: 14px;
+            color: var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fafbfc;
+            border-top: 0 solid var(--border-color);
+        }
+
+        /* قائمة الدروس بداخل الطية */
+        .lessons-list {
+            list-style: none;
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        .lessons-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .lessons-list li:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .lesson-icon-play {
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+
+        .btn-watch {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-watch:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .accordion-item.active .accordion-content {
+            border-top: 1px solid var(--border-color);
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 500;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-text">منصة ترتيل</a>
+        <a href="index.html" class="btn-back">← العودة للرئيسية</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="course-hero">
+            <h1>دورة الموجز في علم المواريث</h1>
+            <p style="color: var(--text-muted); font-size: 16px; margin: 10px 0 0 0;">شرح مرئي مبسط وشامل لأحكام التركات وتأصيل الفرائض عبر قناتنا التعليمية</p>
+            
+            <div class="course-meta-tags">
+                <div class="meta-item">المنهج: <span>الموجز في المواريث</span></div>
+                <div class="meta-item">عدد الدروس: <span>٧ محاضرات</span></div>
+                <div class="meta-item">التكلفة: <span>مجاني بالكامل</span></div>
+            </div>
+        </div>
+
+        <div class="section-title">الخطة الدراسية والمناهج</div>
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>📦 الوحدة الأولى: مقدمات علم المواريث وأصحاب النصف</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+<ul class="lessons-list">
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس الأول: مقدمة في علم المواريث وأهميته</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=R9_9f4Yg640&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=1" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس الثاني: أصحاب النصف (القسم الأول)</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=yW6Iq6Bly5U&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=2" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس الثالث: أصحاب النصف (القسم الثاني)</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=FjM5Y8L0f6g&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=3" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>👥 الوحدة الثانية: أحكام أصحاب الربع، الثمن، والثلثين</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <ul class="lessons-list">
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس الرابع: أحكام أصحاب الربع والثمن في المواريث</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=R5p263xL1X0&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=4" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس الخامس: أحكام أصحاب الثلثين من الورثة</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=gS6oZsh_X_s&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=5" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>🧮 الوحدة الثالثة: تتمة الفروض والورثة من النساء والرجال</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <ul class="lessons-list">
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس السادس: أحكام أصحاب الثلث والثلث الباقي والسدس</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=W5I4vU4o6cE&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=6" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+ </li>
+                        <li>
+                            <div class="lesson-info">
+                                <span class="lesson-icon-play">🔹</span>
+                                <span>الدرس السابع: تفصيل الورثة من الرجال والنساء بالبسط</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=mGf8gE27XvQ&list=PLgijwzdL8bjKJnYe4m46YVtsnzlf9cUbo&index=7" target="_blank" class="btn-watch">شاهد الآن 📺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © منصة ترتيل التعليمية ٢٠٢٦</p>
+    </footer>
+
+    <script>
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                const content = this.nextElementSibling;
+                
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    }
+                });
+
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

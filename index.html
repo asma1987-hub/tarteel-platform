@@ -1,0 +1,361 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة ترتيل التعليمية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --primary-light: #2d6a4f;
+            --accent-color: #d4af37;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            zoom: 100%; 
+        }
+
+        /* --- الهيدر العلوي --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: nowrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: -20px;
+        }
+
+        .logo img {
+            height: 85px;
+            width: 85px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .btn-login {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .btn-register {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        /* --- قسم الهيرو الترحيبي --- */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #f4f7f5 0%, #e9efe0 100%);
+            min-height: 380px;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .hero-content h1 {
+            color: var(--primary-color);
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            text-decoration: none;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-block;
+        }
+ .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* --- قسم التصنيفات --- */
+        .categories {
+            padding: 50px 8%;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .categories h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .cat-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cat-box {
+            background-color: var(--bg-light);
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* --- قسم الدورات المطور --- */
+        .courses-section {
+            padding: 60px 8%;
+            background-color: var(--bg-light);
+        }
+
+        .courses-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 45px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .courses-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+            transition: 0.3s;
+            text-align: right;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .course-img-placeholder {
+            height: 180px;
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+
+        .course-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-body {
+            padding: 25px;
+        }
+
+        .course-body h3 {
+            margin: 0 0 12px 0;
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .course-body p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            height: 70px;
+            overflow: hidden;
+        }
+
+        .btn-course {
+            width: 100%;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-course:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. شريط التنقل -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="شعار ترتيل">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">الدورات</a></li>
+                <li><a href="about-contact.html">عن المنصة</a></li>
+<li><a href="about-contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-login">تسجيل الدخول</a>
+            <a href="register.html" class="btn-register">أنشئ حساباً</a>
+        </div>
+    </header>
+<!-- 2. قسم الهيرو الرئيسي -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>رحلتك لتعلم القرآن الكريم والعلوم الإسلامية تبدأ هنا</h1>
+            <p>منصة ترتيل تجمع لك نخبة من المعلمين المتقنين لتقديم دروس تفاعلية متميزة، بأساليب حديثة تناسب جميع الأعمار والمستويات.</p>
+            <a href="#" class="btn-primary">استكشف دوراتنا الآن</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" alt="التعليم الإلكتروني">
+        </div>
+    </section>
+
+    <!-- 3. قسم التصنيفات المتميزة -->
+    <section class="categories">
+        <h2>التصنيفات المتميزة</h2>
+        <div class="cat-container">
+            <div class="cat-box">📖 علوم القرآن والتجويد</div>
+            <div class="cat-box">🗣️ اللغة العربية والنحو</div>
+            <div class="cat-box">📜 الفقه والعلوم الشرعية</div>
+        </div>
+    </section>
+
+    <!-- 4. قسم أحدث الدورات المتاحة -->
+    <section class="courses-section">
+        <h2>أحدث الدورات المتاحة</h2>
+        <div class="courses-container">
+            
+            <!-- كورس المواريث بصورة شرعية ملائمة وممتازة -->
+            <div class="course-card">
+                <div class="course-img-placeholder">
+                    <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=400&auto=format&fit=crop" alt="أحكام المواريث">
+                </div>
+                <div class="course-body">
+                    <h3>أحكام المواريث</h3>
+                    <p>تعلم فرائض المواريث وقسمة التركات بطريقة مبسطة، مع تطبيقات عملية وحلول للمسائل المعقدة.</p>
+                    <button class="btn-course" onclick="window.location.href='course-details.html'">سجل في الدورة الآن</button>
+                </div>
+            </div>
+
+            <!-- كورس تصحيح التلاوة بعد تعديل الخطأ الإملائي -->
+            <div class="course-card">
+                <div class="course-img-placeholder">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop" alt="تصحيح التلاوة">
+                </div>
+                <div class="course-body">
+                    <h3>تصحيح التلاوة وتحسين الأداء</h3>
+                    <p>حسن صوتك وأدائك في قراءة كتاب الله وتحبيره بالتلقي والمشافهة عبر فصولنا الافتراضية التفاعلية.</p>
+                    <button class="btn-course">سجل في الدورة الآن</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 5. التذييل الفخم -->
+    <footer style="text-align: center; padding: 30px; background-color: var(--primary-color); color: var(--white); font-weight: 500;">
+        <p>جميع الحقوق محفوظة © منصة ترتيل التعليمية ٢٠٢٦</p>
+    </footer>
+
+</body>
+</html>

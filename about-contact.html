@@ -1,0 +1,251 @@
+[13/01/48 10:22 ص] رقمي أنا: <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن المنصة واتصل بنا - منصة ترتيل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --accent-color: #d4af37;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #6c757d;
+            --border-color: #edf2f7;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- الهيدر العلوي --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 6%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-text {
+            color: var(--primary-color);
+            font-weight: 900;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            border: 2px solid var(--primary-color);
+            padding: 8px 22px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* --- حاوي المحتوى الرئيسي --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* --- قسم "عن المنصة" --- */
+        .about-section {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            text-align: right;
+        }
+
+        .about-section h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        /* --- قسم "اتصل بنا" --- */
+        .contact-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+
+        .info-item p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* --- أشكال حقول النموذج --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+[13/01/48 10:22 ص] رقمي أنا: .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+        }
+
+        .btn-send {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 500;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-text">منصة ترتيل</a>
+        <a href="index.html" class="btn-back">← العودة للرئيسية</a>
+    </header>
+
+    <div class="container">
+        
+        <section class="about-section">
+            <h1>عن منصة ترتيل التعليمية</h1>
+            <p>منصة ترتيل هي فضاء تعليمي إلكتروني يهدف إلى تيسير وبسط العلوم الشرعية وعلوم القرآن الكريم للراغبين في طلب العلم من شتى أنحاء العالم. نسعى عبر المنصة إلى تقديم المحتوى العلمي بطرق حديثة، ميسرة، ومنظمة تناسب مستويات الطلاب المختلفة، مع التركيز على التأصيل العلمي الرصين.</p>
+            <p>انطلقنا بتقديم "علم المواريث والفرائض" كخطوة أولى لربط قنواتنا التعليمية ببيئة تفاعلية تخدم الطالب، ونتطلع مستقبلاً للتوسع في شتى العلوم الإسلامية لنكون منارة معتمدة لكل طالب علم.</p>
+        </section>
+
+        <div class="contact-grid">
+            
+            <div class="contact-info">
+                <h2>معلومات التواصل</h2>
+                <div class="info-item">
+                    <h4>📧 البريد الإلكتروني الإداري</h4>
+                    <p>info@tarteel-academy.com</p>
+                </div>
+                <div class="info-item">
+                    <h4>📱 منصات التواصل الاجتماعي</h4>
+                    <p>يمكنكم متابعة أحدث الأخبار والدورات عبر قناتنا الرسمية على اليوتيوب وحساباتنا الأخرى.</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>أرسل لنا استفسارك</h2>
+                <form onsubmit="alert('تم استلام رسالتك بنجاح، سنتواصل معك قريباً!'); return false;">
+                    <div class="form-group">
+                        <label>الاسم بالكامل</label>
+                        <input type="text" placeholder="اكتب اسمك هنا" required>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>نص الرسالة أو الاستفسار</label>
+                        <textarea rows="4" placeholder="اكتب استفسارك بالتفصيل هنا..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">إرسال الرسالة الآن</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © منصة ترتيل التعليمية ٢٠٢٦</p>
+    </footer>
+
+</body>
+</html>
