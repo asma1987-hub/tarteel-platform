@@ -22,9 +22,40 @@ body {
 
 /* 3. قسم البطل (Hero Section) */
 .hero {
-    text-align: center;
+    .hero {
+    background: linear-gradient(135deg, #2d5a27 0%, #4a7c44 100%); /* لون أخضر متدرج فخم */
+    color: white;
     padding: 100px 5%;
-    background-color: #f4f6f4;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    background-color: #c5a059;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #a88545;
+    transform: scale(1.05);
 }
 
 .hero h1 { color: #2d5a27; margin-bottom: 15px; }
