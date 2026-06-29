@@ -1,93 +1,21 @@
-/* تنسيقات عامة وفخامة */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f9f9f9; color: #333; }
+body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; }
 
-/* الهيدر الأنيق */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.2rem; }
+/* الشريط العلوي */
+.navbar { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+.navbar nav ul { display: flex; list-style: none; gap: 20px; }
+.navbar nav a { text-decoration: none; color: #333; font-weight: bold; }
+.auth-buttons { display: flex; gap: 10px; }
+.login-btn { background: none; border: 1px solid #2d5a27; padding: 5px 15px; cursor: pointer; }
+.register-btn { background: #2d5a27; color: white; border: none; padding: 5px 15px; cursor: pointer; }
 
-/* قسم البطل (Hero) مع مساحة وتدرج ألوان */
-.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #f0f4f0, #e0e8e0); }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; color: #1a3a1a; }
-.cta-btn { background: #c5a059; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
-.cta-btn:hover { background: #a68545; }
+/* قسم البطل */
+.hero { padding: 150px 5% 100px; text-align: center; background: #e8ece8; }
+.cta-btn { background: #c5a059; color: white; padding: 10px 30px; border: none; margin-top: 20px; cursor: pointer; }
 
-/* بطاقات الدورات (تصميم كرتوني احترافي) */
-.courses { padding: 80px 8%; text-align: center; }
-.course-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 30px; border-radius: 15px; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-.card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
-.course-btn { display: inline-block; background: #2d5a27; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; margin-top: 20px; }
-/* تنسيق اسم المنصة */
-.site-title {
-    font-size: 2.5rem; /* حجم كبير */
-    color: #2d5a27;   /* لون أخضر غامق فخم */
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;     /* ليأخذ مساحة المنتصف */
-    font-weight: 800;
-}
-/* تمييز خاص لبطاقة المواريث */
-.curriculum-item:first-child {
-    border: 2px solid #c5a059; /* إطار ذهبي لتمييز الأساس */
-    background-color: #fdfbf7;
-}
+/* قسم الدورات */
+.courses { padding: 50px 5%; text-align: center; }
+.course-container { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+.card { background: white; padding: 20px; width: 250px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
-.curriculum-item:first-child h3 {
-    color: #c5a059;
-}
-/* تعديل الهيدر ليصبح أكثر اتساعاً */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background: white;
-    border-bottom: 3px solid #c5a059; /* خط ذهبي فخم أسفل الهيدر */
-.hero-container { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-around; 
-    padding: 50px 8%; 
-    gap: 40px; 
-}
-.hero-text { flex: 1; text-align: right; }
-.hero-image { flex: 1; }
-.hero-image img { 
-    width: 100%; 
-    border-radius: 20px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-/* تثبيت الشريط العلوي */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* تنسيق الأزرار (تسجيل الدخول وإنشاء حساب) */
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-buttons button {
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-/* تنسيق القائمة لتكون في المنتصف */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
+/* التذييل */
+footer { background: #2d5a27; color: white; text-align: center; padding: 20px; margin-top: 50px; }
