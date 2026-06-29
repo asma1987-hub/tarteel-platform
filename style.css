@@ -8,18 +8,25 @@ body {
 }
 
 /* 2. الشريط العلوي (الهيدر) */
+/* تنسيق القائمة العلوية */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 10px 5%;
 }
 
+.navbar nav ul {
+    display: flex;
+    list-style: none; /* لإزالة النقاط */
+    gap: 20px;       /* مسافة بين الروابط */
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
 /* 3. قسم البطل (Hero Section) */
 .hero {
     .hero {
