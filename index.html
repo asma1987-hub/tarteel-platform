@@ -6,23 +6,26 @@
     <title>منصة ترتيل التعليمية</title>
 </head>
 <body>
-
- <header class="navbar">
-    <div class="logo"><img src="logo.png" alt="شعار منصة ترتيل" style="height: 90px;"></div>
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
     
+    <!-- اللوغو -->
+    <div class="logo" style="font-weight: bold; font-size: 24px; color: #2d5a27;">ترتيل</div>
+    
+    <!-- القائمة الأفقية -->
     <nav>
-        <ul>
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="moarith-course.html">المواريث</a></li>
-            <li><a href="#">عن المنصة</a></li>
+        <ul style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0;">
+            <li><a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">الرئيسية</a></li>
+            <li><a href="moarith-course.html" style="text-decoration: none; color: #333; font-weight: bold;">المواريث</a></li>
+            <li><a href="#" style="text-decoration: none; color: #333; font-weight: bold;">عن المنصة</a></li>
         </ul>
     </nav>
+    
+    <!-- أزرار الدخول -->
     <div class="auth-buttons">
-        <button class="login-btn">دخول</button>
-        <button class="register-btn">حساب جديد</button>
+        <button style="background: none; border: none; cursor: pointer;">دخول</button>
+        <button style="background: #2d5a27; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">حساب جديد</button>
     </div>
 </header>
-
     <section class="hero">
         <section class="hero">
     <img src="hero-image.jpg" alt="رحلتك لتعلم القرآن" class="hero-image">
