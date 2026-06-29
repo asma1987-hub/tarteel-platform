@@ -26,7 +26,15 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; 
     flex-grow: 1;     /* ليأخذ مساحة المنتصف */
     font-weight: 800;
 }
+/* تمييز خاص لبطاقة المواريث */
+.curriculum-item:first-child {
+    border: 2px solid #c5a059; /* إطار ذهبي لتمييز الأساس */
+    background-color: #fdfbf7;
+}
 
+.curriculum-item:first-child h3 {
+    color: #c5a059;
+}
 /* تعديل الهيدر ليصبح أكثر اتساعاً */
 .navbar {
     display: flex;
