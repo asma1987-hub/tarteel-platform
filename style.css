@@ -1,22 +1,19 @@
-body { font-family: sans-serif; margin: 0; background-color: #fcfcfc; }
+/* تنسيقات عامة وفخامة */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f9f9f9; color: #333; }
 
-/* الهيدر */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.navbar nav ul { list-style: none; display: flex; }
-.navbar nav ul li { margin: 0 15px; font-weight: bold; }
+/* الهيدر الأنيق */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.2rem; }
 
-/* الأزرار */
-.auth-buttons button { padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #2d5a27; }
-.register-btn { background-color: #2d5a27; color: white; }
+/* قسم البطل (Hero) مع مساحة وتدرج ألوان */
+.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #f0f4f0, #e0e8e0); }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; color: #1a3a1a; }
+.cta-btn { background: #c5a059; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
+.cta-btn:hover { background: #a68545; }
 
-/* قسم البطل */
-.hero { text-align: center; padding: 80px 20px; background: #eaf0ea; }
-.cta-btn { background: #d4af37; color: white; padding: 15px 30px; border: none; font-size: 18px; margin-top: 20px; cursor: pointer; }
-.courses { padding: 40px; text-align: center; }
-.course-cards { display: flex; justify-content: center; gap: 20px; }
-.card { background: white; padding: 20px; width: 300px; border: 1px solid #ddd; border-radius: 10px; }
-.card button { background-color: #2d5a27; color: white; border: none; padding: 10px; cursor: pointer; }
-.logo img {
-    height: 70px !important; /* زيادة الحجم ليكون واضحاً */
-    width: auto;
-}
+/* بطاقات الدورات (تصميم كرتوني احترافي) */
+.courses { padding: 80px 8%; text-align: center; }
+.course-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: white; padding: 30px; border-radius: 15px; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+.course-btn { display: inline-block; background: #2d5a27; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; margin-top: 20px; }
