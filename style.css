@@ -17,3 +17,21 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; 
 .card { background: white; padding: 30px; border-radius: 15px; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
 .card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
 .course-btn { display: inline-block; background: #2d5a27; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; margin-top: 20px; }
+/* تنسيق اسم المنصة */
+.site-title {
+    font-size: 2.5rem; /* حجم كبير */
+    color: #2d5a27;   /* لون أخضر غامق فخم */
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;     /* ليأخذ مساحة المنتصف */
+    font-weight: 800;
+}
+
+/* تعديل الهيدر ليصبح أكثر اتساعاً */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: white;
+    border-bottom: 3px solid #c5a059; /* خط ذهبي فخم أسفل الهيدر */
