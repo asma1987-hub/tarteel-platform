@@ -6,35 +6,27 @@
     <title>منصة ترتيل التعليمية</title>
 </head>
 <body>
-<header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    
-    <!-- اللوغو -->
-    <div class="logo" style="font-weight: bold; font-size: 24px; color: #2d5a27;">ترتيل</div>
-    
-    <!-- القائمة الأفقية -->
-    <nav>
-        <ul style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0;">
-            <li><a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">الرئيسية</a></li>
-            <li><a href="moarith-course.html" style="text-decoration: none; color: #333; font-weight: bold;">المواريث</a></li>
-            <li><a href="#" style="text-decoration: none; color: #333; font-weight: bold;">عن المنصة</a></li>
-        </ul>
-    </nav>
-    
-    <!-- أزرار الدخول -->
-    <div class="auth-buttons">
-        <button style="background: none; border: none; cursor: pointer;">دخول</button>
-        <button style="background: #2d5a27; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">حساب جديد</button>
-    </div>
-</header>
+
+    <header class="navbar">
+        <div class="logo">ترتيل</div>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">الدورات</a></li>
+                <li><a href="#">عن المنصة</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn">دخول</button>
+            <button class="register-btn">حساب جديد</button>
+        </div>
+    </header>
+
     <section class="hero">
-        <section class="hero">
-    <img src="hero-image.jpg" alt="رحلتك لتعلم القرآن" class="hero-image">
-    <section class="hero">
-    <div class="hero-content">
         <h1>رحلتك لتعلم القرآن والعلوم الإسلامية تبدأ هنا</h1>
-        <p>منصة ترتيل تجمع لك نخبة من المعلمين المتقنين بأساليب حديثة تناسب جميع الأعمار والمستويات.</p>
-        <button class="cta-btn" onclick="window.location.href='#courses'">استكشف دوراتنا الآن</button>
-    </div>
+        <p>منصة ترتيل تجمع لك نخبة من المعلمين المتقنين</p>
+        <button class="cta-btn">استكشف دوراتنا</button>
     </section>
 <section class="features">
     <h2 style="text-align: center;">التصنيفات المتميزة</h2>
@@ -44,22 +36,21 @@
         <a href="#arabic" class="feature-btn">اللغة العربية والنحو ✍️</a>
     </div>
 </section>
-   <section class="courses">
-    <h2>أحدث الدورات المتاحة</h2>
+  <section id="courses" class="courses">
+    <h2 style="text-align: center; color: #2d5a27; margin-bottom: 40px;">أحدث الدورات المتاحة</h2>
+    
     <div class="course-container">
-        <div class="card">
-            <h3>دورة علم المواريث</h3>
-            <p>دراسة متخصصة وشاملة للفرائض.</p>
-            <a href="moarith-course.html" class="cta-btn">عرض تفاصيل الدورة والدروس</a>
+        <div class="course-card">
+            <div class="course-img" style="background-color: #e0e0e0; height: 150px; border-radius: 10px 10px 0 0;"></div>
+            <div class="course-content" style="padding: 20px;">
+                <h3 style="margin-top: 0;">دورة أحكام المواريث</h3>
+                <p style="color: #666; font-size: 0.9rem;">تعلمي فقه المواريث بطريقة مبسطة ومنظمة.</p>
+                <a href="moarith-course.html" class="cta-btn">ابدأ التعلم</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>دورة تصحيح التلاوة</h3>
-            <p>تحسين مهارات القراءة والتجويد.</p>
-            <a href="#" class="cta-btn">عرض تفاصيل الدورة</a>
+        
         </div>
-    </div>
 </section>
-
     <footer>
         <p>جميع الحقوق محفوظة © منصة ترتيل التعليمية 2026</p>
     </footer>
