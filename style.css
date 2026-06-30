@@ -112,3 +112,12 @@ footer { background: #2d5a27; color: white; text-align: center; padding: 20px; m
     font-size: 0.9rem;
     margin-bottom: 20px;
 }
+/* تنسيق الأيقونة داخل البطاقة */
+.course-img i {
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.course-card:hover .course-img i {
+    transform: scale(1.1); /* تكبر الأيقونة قليلاً عند مرور الماوس */
+}
