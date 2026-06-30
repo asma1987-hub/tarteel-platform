@@ -16,6 +16,18 @@ body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; }
 .courses { padding: 50px 5%; text-align: center; }
 .course-container { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
 .card { background: white; padding: 20px; width: 250px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+/* تنسيق الزر داخل البطاقة ليظهر بوضوح */
+.course-content .cta-btn {
+    display: inline-block;
+    background-color: #2d5a27;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
 .course-container {
     display: flex;
     justify-content: center;
